@@ -1,0 +1,37 @@
+step1 : Download python from python.org
+
+step2 : install by clicking ADD to Path and all user (use custom installation)
+
+step3 : verify by typing python under cmd whether the interactive python mode enabled. if enabled which means installed and added to path then skip step4. if not follow the step4 
+
+step4 : if not clicked Add to Path -
+      	copy python.exe location 
+      	for example 
+      	"C:\Python313" or "C:\Program Files\Python312" 
+      	and add to environmental varible setting
+	
+      	(also copy scripts folder location too
+      	for example
+      	"C:\Python313\Scripts" or "C:\Program Files\Python312\Scripts"
+      	and add to environmental varible setting)
+
+step5 : install any libs using "pip" using "CMD" with "Administrative mode"
+
+
+step5 : if you wanted to create virtual environment then follow the below
+
+	1. create a folder using any editor and open cmd or terminal within the folder and use the following commands(for example folder name(project))
+
+	py -m venv nameofyouenviroment
+	for example 
+	py -m venv django_env
+
+	2 after that activate the environment using below commands
+	confirm that you are inside the project folder in terminal/cmd then use the below
+	django_env/scripts/activate
+	
+	then your teminal or cmd looks like this
+	(django_env) d://project>
+
+	3. then use pip install django to install django latest
+	
