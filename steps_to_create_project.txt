@@ -1,0 +1,34 @@
+
+for virual environmental creation
+py -m venv demo_django
+
+for creating django project
+
+django-admin startproject myprojectv1
+
+
+
+for creating application inside django project
+
+use CD commend and project name to enter inside
+
+use the below
+
+python manage.py startapp mainoffice
+python manage.py startapp coeoffice
+python manage.py startapp liboffice
+python manage.py startapp maindepart
+
+add all the apps name in settings.py in mainapplication
+
+
+create index.html and other html files in templates folder in any one of the apps (mainoffice,coeoffice)
+
+
+modify the views.py
+add the urls.py in each apps and include the path to all the views
+then include it in the mainapplications urls.py using "include"
+
+to run the project use
+
+python manage.py runserver 
