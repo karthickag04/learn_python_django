@@ -11,3 +11,9 @@ def home(request):
 def services(request):
     # return HttpResponse("Welcome to the main office!")
     return render(request, "services.html")
+
+
+
+def about(request):
+    return HttpResponse("<h1>Welcome to the main office about page!<h1>")
+    # return render(request, "a.html")

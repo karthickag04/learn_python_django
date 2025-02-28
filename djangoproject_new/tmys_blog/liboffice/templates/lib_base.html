@@ -19,17 +19,17 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="">Home</a>
+                <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">About us</a>
+                <a class="nav-link" href="{% url 'about' %}">About us</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Serivces
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="services">service page show</a></li>
+                  <li><a class="dropdown-item" href="{% url 'services' %}">service page show</a></li>
                   <li><a class="dropdown-item" href="#">Appy for Admission</a></li>
                   <li><a class="dropdown-item" href="#">Apply ID card</a></li>
                   <li><hr class="dropdown-divider"></li>

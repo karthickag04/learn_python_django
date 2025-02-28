@@ -21,6 +21,8 @@ from django.urls import path, include
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("mainoffice/", include("mainoffice.urls")),
+
+    path("liboffice/", include("liboffice.urls")),
    
 
 ]
