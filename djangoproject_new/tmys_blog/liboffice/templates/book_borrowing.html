@@ -1,0 +1,25 @@
+<!-- book_borrowing.html -->
+{% extends 'lib_base.html' %}
+
+{% block title %} Book Borrowing Page {% endblock %}
+
+{% block content %}
+  <h1>Borrow a Book</h1>
+  <p>Select a book from our catalog and fill out the form to borrow it.</p>
+
+  <form>
+    <div class="mb-3">
+      <label for="book" class="form-label">Select Book</label>
+      <select class="form-select" id="book">
+        <option>Book Title 1</option>
+        <option>Book Title 2</option>
+        <option>Book Title 3</option>
+      </select>
+    </div>
+    <div class="mb-3">
+      <label for="borrower_name" class="form-label">Your Name</label>
+      <input type="text" class="form-control" id="borrower_name" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Borrow Book</button>
+  </form>
+{% endblock %}

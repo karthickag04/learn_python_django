@@ -1,0 +1,21 @@
+<!-- membership.html -->
+{% extends 'lib_base.html' %}
+
+{% block title %} Members Page {% endblock %}
+
+{% block content %}
+  <h1>Become a Member</h1>
+  <p>Sign up to become a member and enjoy access to our library's collection and services.</p>
+
+  <form>
+    <div class="mb-3">
+      <label for="name" class="form-label">Full Name</label>
+      <input type="text" class="form-control" id="name" required>
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Email Address</label>
+      <input type="email" class="form-control" id="email" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+{% endblock %}
