@@ -31,7 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'jasmin',
+    "jazzmin",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     "mainoffice",
     "liboffice",
     "coeoffice",
+    "account"
 ]
 
 MIDDLEWARE = [
@@ -80,13 +81,16 @@ WSGI_APPLICATION = "tmys_blog.wsgi.application"
 DATABASES = {
     "default": {
         # "ENGINE": "django.db.backends.sqlite3",
-        # "NAME": BASE_DIR / "db.sqlite3",
+        # "NAME": BASE_DIR / "tmys.sqlite3",
+        
         "ENGINE": "django.db.backends.mysql",
-        "NAME": "tmys_blog",
+        "NAME": "tmys_blog001",
         "USER": "test01",
         "PASSWORD": "test@123",
-        "HOST": "192.168.1.241",
+        "HOST": "192.168.1.16",
         "PORT": "3306",
+        
+
 
         
     }
@@ -110,6 +114,15 @@ AUTH_PASSWORD_VALIDATORS = [
         "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",
     },
 ]
+
+
+
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',  # Default authentication backend
+]
+
+LOGIN_REDIRECT_URL = 'index'  # Redirect after login
+LOGOUT_REDIRECT_URL = 'login'  # Redirect after logout
 
 
 # Internationalization

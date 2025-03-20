@@ -20,3 +20,4 @@ class Register(models.Model):
 
     def __str__(self):
         return self.username
+        # return f"First Name: {self.first_name}, Last Name: {self.last_name}, Email: {self.email}, Username: {self.username}, Password: {self.password}"
