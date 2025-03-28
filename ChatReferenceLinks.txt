@@ -1,0 +1,3 @@
+
+Implementation of Login and Register using default Auth under Django
+https://chatgpt.com/share/67e655b5-4c14-800b-99ec-5925637f0499
