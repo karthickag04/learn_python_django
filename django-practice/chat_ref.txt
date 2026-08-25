@@ -1,0 +1,3 @@
+chat ref added for Django project creation with two apps named as main and accounts and its routing.. 
+
+https://chatgpt.com/share/6a8d313f-b554-83ee-b6a8-bf54e6246ea9
