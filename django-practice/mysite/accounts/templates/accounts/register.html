@@ -1,107 +1,59 @@
-{% extends "base.html" %}
-
-{% block title %}
-    Register
-{% endblock %}
-
+{% extends "base.html" %} {% block title %} Register {% endblock %} 
 {% block content %}
 
-      <div class="form-container">
-        <h2>Registration Form</h2>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-8 col-lg-6">
+      <div class="card shadow-sm mt-5 mb-5">
+        <div class="card-body p-4 p-md-5">
+          <h2 class="text-center mb-4">Create Account</h2>
 
-        <form action="#" method="post">
+          <form method="post">
+            {% csrf_token %}
+            <!-- {{ form.as_p }} -->
 
-            <div class="form-group">
-                <label for="fullname">Full Name</label>
-                <input type="text" id="fullname" name="fullname"
-                       placeholder="Enter your full name" required>
+            <!-- Username -->
+            <div class="mb-3">
+              <label for="{{ form.username.id_for_label }}" class="form-label">
+                Username
+              </label>
+              {{ form.username }}
             </div>
-
-            <div class="form-group">
-                <label for="dob">Date of Birth</label>
-                <input type="date" id="dob" name="dob" required>
+            <div class="mb-3">
+              <label for="{{ form.email.id_for_label }}" class="form-label">
+                Email
+              </label>
+              {{ form.email }}
             </div>
-
-            <div class="form-group">
-                <label>Gender</label>
-                <div class="gender">
-                    <label>
-                        <input type="radio" name="gender" value="male">
-                        Male
-                    </label>
-
-                    <label>
-                        <input type="radio" name="gender" value="female">
-                        Female
-                    </label>
-
-                    <label>
-                        <input type="radio" name="gender" value="other">
-                        Other
-                    </label>
-                </div>
+            <div class="mb-3">
+              <label for="{{ form.password1.id_for_label }}" class="form-label">
+                Password
+              </label>
+              {{ form.password1 }} {% if form.password1.errors %}
+              <div class="text-danger small mt-1">
+                {{ form.password1.errors }}
+              </div>
+              {% endif %}
             </div>
+            <div class="mb-3">
+              <label for="{{ form.password2.id_for_label }}" class="form-label">
+                Confirm Password
+              </label>
 
-            <div class="form-group">
-                <label for="mobile">Mobile Number</label>
-                <input type="tel" id="mobile" name="mobile"
-                       placeholder="Enter mobile number" required>
+              {{ form.password2 }} {% if form.password2.errors %}
+              <div class="text-danger small mt-1">
+                {{ form.password2.errors }}
+              </div>
+              {% endif %}
             </div>
-
-            <div class="form-group">
-                <label for="email">Email Address</label>
-                <input type="email" id="email" name="email"
-                       placeholder="Enter email address" required>
+            <div class="d-grid mt-4">
+              <button type="submit" class="btn btn-primary">Register</button>
             </div>
-
-            <div class="form-group">
-                <label for="address">Address</label>
-                <textarea id="address" name="address"
-                          placeholder="Enter your address"></textarea>
-            </div>
-
-            <div class="form-group">
-                <label for="city">City</label>
-                <input type="text" id="city" name="city"
-                       placeholder="Enter city">
-            </div>
-
-            <div class="form-group">
-                <label for="state">State</label>
-                <input type="text" id="state" name="state"
-                       placeholder="Enter state">
-            </div>
-
-            <div class="form-group">
-                <label for="pincode">PIN Code</label>
-                <input type="text" id="pincode" name="pincode"
-                       placeholder="Enter PIN code">
-            </div>
-
-            <div class="form-group">
-                <label for="username">Username</label>
-                <input type="text" id="username" name="username"
-                       placeholder="Create a username" required>
-            </div>
-
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password"
-                       placeholder="Create a password" required>
-            </div>
-
-            <div class="form-group">
-                <label for="confirm-password">Confirm Password</label>
-                <input type="password" id="confirm-password"
-                       name="confirm-password"
-                       placeholder="Confirm your password" required>
-            </div>
-
-            <button type="submit" class="submit-btn">
-                Register
-            </button>
-
-        </form>
+          </form>
+        </div>
+      </div>
     </div>
+  </div>
+</div>
 
 {% endblock %}
