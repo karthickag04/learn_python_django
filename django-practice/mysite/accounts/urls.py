@@ -14,4 +14,14 @@ urlpatterns = [
         views.change_password_view,
         name="change_password",
     ),
+    path(
+        'dashboard/',
+        views.dashboard,
+        name='dashboard'
+    ),
+      path(
+        'logout/',
+        views.logout_view,
+        name='logout'
+    ),
 ]

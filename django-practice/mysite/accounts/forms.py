@@ -28,4 +28,21 @@ class RegisterForm(UserCreationForm):
         ]
 # Login Form
 class LoginForm(AuthenticationForm):
-    pass
+    username = forms.CharField(
+    widget=forms.TextInput(
+        attrs={
+            'class': 'form-control',
+            'placeholder': 'Enter username'
+        }
+    )
+    )
+
+    password = forms.CharField(
+        widget=forms.PasswordInput(
+            attrs={
+                'class': 'form-control',
+                'placeholder': 'Enter password'
+            }
+        )
+    )
+
