@@ -13,3 +13,7 @@ https://chatgpt.com/share/6ae2e8ed-57d0-83ee-8911-7a771f065244
 
 chat ref for login workflow with dashboard
 https://chatgpt.com/share/6ae9813f-478c-83e8-b079-d396cdb54e9f
+
+
+chat ref for bootstrap menu change under base and dashboard
+https://chatgpt.com/share/6af55388-d3e4-83ec-a618-59e180bf5190
