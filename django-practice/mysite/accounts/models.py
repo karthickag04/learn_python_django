@@ -3,14 +3,29 @@ from django.contrib.auth.models import User
 
 
 class Profile(models.Model):
+
+    ROLE_CHOICES = [
+        ('admin', 'Admin'),
+        ('teacher', 'Teacher'),
+        ('student', 'Student'),
+    ]
+
     user = models.OneToOneField(
         User,
         on_delete=models.CASCADE
     )
 
     address = models.TextField()
-    phone_number = models.CharField(max_length=15)
+
+    phone_number = models.CharField(
+        max_length=15
+    )
+
+    role = models.CharField(
+        max_length=10,
+        choices=ROLE_CHOICES,
+        default='student'
+    )
 
     def __str__(self):
         return self.user.username
-# Create your models here.

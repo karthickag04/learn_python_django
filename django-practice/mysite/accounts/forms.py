@@ -16,6 +16,13 @@ class RegisterForm(UserCreationForm):
         max_length=15
     )
 
+    role = forms.ChoiceField(
+        choices=Profile.ROLE_CHOICES,
+        widget=forms.Select(attrs={
+            'class': 'form-select'
+        })
+    )
+
     class Meta:
         model = User
         fields = [
@@ -25,6 +32,7 @@ class RegisterForm(UserCreationForm):
             'password2',
             'address',
             'phone_number',
+            'role',
         ]
 # Login Form
 class LoginForm(AuthenticationForm):

@@ -50,7 +50,8 @@ def register_view(request):
             Profile.objects.create(
                 user=user,
                 address=form.cleaned_data['address'],
-                phone_number=form.cleaned_data['phone_number']
+                phone_number=form.cleaned_data['phone_number'],
+                role=form.cleaned_data['role']
             )
             # return render(request, "accounts/login.html")
             return redirect("accounts:login")
