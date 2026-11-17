@@ -20,3 +20,7 @@ https://chatgpt.com/share/6af55388-d3e4-83ec-a618-59e180bf5190
 
 chat ref for registration to include role
 https://chatgpt.com/share/6af6b7ad-7da8-83ee-a5d7-54c41e1caa2b
+
+
+chat ref for login and landing on different dashboard based on role
+https://chatgpt.com/share/6afbeb39-1748-83ee-bbf8-f18cb30992fc

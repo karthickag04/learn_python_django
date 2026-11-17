@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Student Dashboard
+{% endblock %}
+
+{% block content %}
+
+<div class="container-fluid">
+
+    <div class="card shadow-sm border-0">
+
+        <div class="card-body p-4">
+
+            <h2 class="fw-bold">
+                Student Dashboard
+            </h2>
+
+            <p class="text-muted">
+                Welcome, {{ user.first_name|default:user.username }}!
+            </p>
+
+            <p>
+                Welcome to the Student Portal.
+                You can access your academic information here.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

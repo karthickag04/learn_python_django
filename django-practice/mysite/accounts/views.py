@@ -25,7 +25,21 @@ def login_view(request):
 
             login(request, user)
 
-            return redirect('accounts:dashboard')
+            # Get the user's profile
+            profile = Profile.objects.get(user=user)
+
+            # Role-based redirection
+            if profile.role == 'student':
+
+                return redirect('studentapp:index')
+
+            elif profile.role == 'teacher':
+
+                return redirect('teacherapp:index')
+
+            elif profile.role == 'admin':
+
+                return redirect('main:index')
         
         else:
 
