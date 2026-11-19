@@ -22,5 +22,12 @@ chat ref for registration to include role
 https://chatgpt.com/share/6af6b7ad-7da8-83ee-a5d7-54c41e1caa2b
 
 
+
+
+
 chat ref for login and landing on different dashboard based on role
 https://chatgpt.com/share/6afbeb39-1748-83ee-bbf8-f18cb30992fc
+
+
+chat ref for admin dashbard data fetch and display 
+https://chatgpt.com/share/6afe88f8-52e4-83ec-9a68-498397bb9928
