@@ -9,8 +9,25 @@ from .models import Profile
 
 def login_view(request):
 
-    #  if request.user.is_authenticated:
-    #     return redirect('dashboard')
+    # this if used to check the user logged in or not if logged in then login page will not be shown to the user then it will be routed to their dashbaod
+   
+
+    if request.user.is_authenticated:
+
+        profile01 = Profile.objects.get(user=request.user)
+  
+        # Role-based redirection
+        if profile01.role == 'student':
+
+            return redirect('studentapp:index')
+
+        elif profile01.role == 'teacher':
+
+            return redirect('teacherapp:index')
+
+        elif profile01.role == 'admin':
+
+            return redirect('main:index')
 
     if request.method == 'POST':
 
@@ -55,7 +72,31 @@ def login_view(request):
         return render(request, "accounts/login.html", {"form": form})
 
 
+
+
+
+
 def register_view(request):
+
+     # this if used to check the user logged in or not if logged in then login page will not be shown to the user then it will be routed to their dashbaod
+   
+
+    if request.user.is_authenticated:
+    
+            profile01 = Profile.objects.get(user=request.user)
+      
+            # Role-based redirection
+            if profile01.role == 'student':
+    
+                return redirect('studentapp:index')
+    
+            elif profile01.role == 'teacher':
+    
+                return redirect('teacherapp:index')
+    
+            elif profile01.role == 'admin':
+    
+                return redirect('main:index')
 
     if request.method == "POST":
         form = RegisterForm(request.POST)

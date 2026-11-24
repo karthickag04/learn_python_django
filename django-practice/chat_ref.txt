@@ -31,3 +31,7 @@ https://chatgpt.com/share/6afbeb39-1748-83ee-bbf8-f18cb30992fc
 
 chat ref for admin dashbard data fetch and display 
 https://chatgpt.com/share/6afe88f8-52e4-83ec-9a68-498397bb9928
+
+
+chat ref added for Delete and Edit under Admin dahsboard
+https://chatgpt.com/share/6b05236b-e898-83ee-9a0d-c9e6f128acaa
